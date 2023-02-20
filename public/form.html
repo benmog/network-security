@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>POST Request Example</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        Name:
+        <input type="text" id="name" />
+      </label>
+      <label>
+        Age:
+        <input type="number" id="age" />
+      </label>
+      <button type="submit" id="submit">
+        Submit
+      </button>
+    </form>
+
+    <script>
+      const form = document.querySelector('form');
+      const nameInput = document.querySelector('#name');
+      const ageInput = document.querySelector('#age');
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        const data = {
+          name: nameInput.value,
+          age: ageInput.value
+        };
+
+        fetch('http://example.com/api/endpoint', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+          });
+      });
+    </script>
+  </body>
+</html>

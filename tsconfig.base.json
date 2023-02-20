@@ -1,0 +1,47 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "types": ["node"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@namogoo/authentication": ["libs/authentication/src/index.ts"],
+      "@namogoo/aws": ["libs/aws/src/index.ts"],
+      "@namogoo/environment-configurations": [
+        "libs/environment-configurations/src/index.ts"
+      ],
+      "@namogoo/jdl-core": ["libs/jdl-core/src/index.ts"],
+      "@namogoo/jenkins": ["libs/jenkins/src/index.ts"],
+      "@namogoo/logger": ["libs/logger/src/index.ts"],
+      "@namogoo/mongo": ["libs/mongo/src/index.ts"],
+      "@namogoo/mssql": ["libs/mssql/src/index.ts"],
+      "@namogoo/mysql": ["libs/mysql/src/index.ts"],
+      "@namogoo/ncl": ["libs/ncl/src/index.ts"],
+      "@namogoo/nmg-common-interfaces": [
+        "libs/nmg-common-interfaces/src/index.ts"
+      ],
+      "@namogoo/notification": ["libs/notification/src/index.ts"],
+      "@namogoo/nmg-common-utils": ["libs/nmg-common-utils/src/index.ts"],
+      "@namogoo/redis": ["libs/redis/src/index.ts"],
+      "@namogoo/slack": ["libs/slack/src/index.ts"],
+      "@namogoo/unified-tag-interfaces": [
+        "libs/unified-tag-interfaces/src/index.ts"
+      ],
+      "@namogoo/utils": ["libs/utils/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
